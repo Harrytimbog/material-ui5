@@ -1,7 +1,8 @@
-import { Box, Typography } from "@mui/material";
+import { BottomNavigation, Box, Paper, Typography } from "@mui/material";
 import Container from "@mui/material/Container";
 import CustomizedAccordions from "../components/Accordion";
 import ImageCollage from "../components/ImageCollage";
+import BasicModal from "../components/Modal";
 
 const Tour = () => (
   <Container sx={{ width: 900 }}>
@@ -33,12 +34,21 @@ const Tour = () => (
         of Lorem Ipsum.
       </Typography>
     </Box>
-    <Box>
+    <Box marginBottom={10}>
       <Typography variant="h6" component="h4" marginTop={3} marginBottom={2}>
         Frequently Asked Questions
       </Typography>
       <CustomizedAccordions />
     </Box>
+    <Paper
+      sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
+      elevation={3}
+    >
+      <BottomNavigation
+      >
+      <BasicModal />
+      </BottomNavigation>
+    </Paper>
   </Container>
 );
 
