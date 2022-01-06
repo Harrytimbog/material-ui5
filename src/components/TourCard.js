@@ -4,10 +4,38 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { AccessTime } from "@mui/icons-material";
 import Rating from "@mui/material/Rating";
+import { createTheme, ThemeProvider } from "@mui/material";
+
+const theme = createTheme({
+  components: {
+    MuiTypography: {
+      variants: [
+        {
+          props: {
+            variant: "body2",
+          },
+          style: {
+            fontSize: 12,
+          }
+        },
+        {
+          props: {
+            variant: "body3",
+          },
+          style: {
+            fontSize: 10,
+          }
+        },
+      ]
+    }
+  }
+})
 
 const TourCard = () => {
   return (
     <Grid item xs={3}>
+    <ThemeProvider theme={theme}>
+
       <Paper elevation={3}>
         <img
           src="https://images.unsplash.com/photo-1551963831-b3b1ca40c98e"
@@ -57,6 +85,7 @@ const TourCard = () => {
           </Box>
         </Box>
       </Paper>
+    </ThemeProvider>
     </Grid>
   );
 };
