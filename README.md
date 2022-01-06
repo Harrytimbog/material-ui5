@@ -1,5 +1,5 @@
 # material-ui5
-Material UI work around and tute on the way to building cool, awesome React apps in little time
+Material UI work around and tute on the way to building cool, awesome  user interface for React apps in little time
 ## Getting Started
 
 
